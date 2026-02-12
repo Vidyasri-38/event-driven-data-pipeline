@@ -11,6 +11,7 @@ resource "aws_lambda_function" "processor" {
     variables = {
       RAW_BUCKET       = aws_s3_bucket.raw_data.bucket
       PROCESSED_BUCKET = aws_s3_bucket.processed_data.bucket
+      DEST_BUCKET  =  aws_s3_bucket.processed_data.bucket
     }
   }
 }
