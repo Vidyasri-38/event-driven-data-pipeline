@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_event_rule" "daily_trigger" {
   name                = "${var.project_name}-daily-trigger"
-  schedule_expression = "cron(58 2 * * ? *)"
+  schedule_expression = "cron(15 3 * * ? *)"
 }
 
 resource "aws_cloudwatch_event_target" "lambda_target" {
